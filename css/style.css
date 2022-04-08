@@ -44,6 +44,7 @@ body {
 h2{
   padding: 10%;
   text-transform: capitalize;
+  font-weight: 800;
 }
 @media only screen and (max-width: 700px){
 	body{

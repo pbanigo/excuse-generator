@@ -22,7 +22,7 @@ function excuse(){
 
 //Generate Random Facts
 	const url2 = 'https://evilinsult.com/generate_insult.php?lang=en&type=json';
-    fetch(url2, {mode: 'no-cors'})
+    fetch(url2, {mode: 'cors'})
     .then(res => res.json()) // parse response as JSON
     .then(data => {
     	console.log(data);
