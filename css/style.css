@@ -29,6 +29,7 @@ body {
 }
 #random{
 	font-style: italic;
+  padding-top: 5%;
 }
 #generate {
   display: flex;
