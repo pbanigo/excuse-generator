@@ -12,7 +12,7 @@ function excuse(){
 	fetch(url, {mode: 'cors'})
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-        console.log(data[0].excuse);
+       // console.log(data[0].excuse);
         document.querySelector('h1').textContent = data[0].excuse;
         document.querySelector('h2').textContent = 'generate another excuse!';
     	synth.speak(new SpeechSynthesisUtterance(document.querySelector('h1').textContent));//This reads any text in that element
@@ -21,18 +21,18 @@ function excuse(){
     	console.log(`error ${err}`)
     });
 
-/* Remove insults
-	const url2 = 'https://insult.mattbas.org/api/en/insult.json';
+
+	const url2 = 'https://asli-fun-fact-api.herokuapp.com/';
     fetch(url2, {mode: 'cors'})
     .then(res => res.json()) // parse response as JSON
     .then(data => {
-    	console.log(data);
-    	document.getElementById('random').textContent = data.insult;
+    	//console.log(data.data.fact);
+    	document.getElementById('random').textContent = data.data.fact;
     	//document.querySelector('h1').textContent = `You can ${data.activity}`;
     })
     .catch(err => {
     	console.log(`error ${err}`);
     });
 
-*/
+
 }
