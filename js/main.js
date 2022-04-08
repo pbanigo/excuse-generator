@@ -24,7 +24,7 @@ function excuse(){
 //Generate Random Facts
 	const url2 = 'https://evilinsult.com/generate_insult.php?lang=en&type=json';
     fetch(url2, {
-           method: 'POST',
+           method: 'GET',
            mode: 'cors',
            headers: {
              'Content-Type': 'application/json'
