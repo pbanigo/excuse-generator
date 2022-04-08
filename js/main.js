@@ -21,7 +21,7 @@ function excuse(){
     	console.log(`error ${err}`)
     });
 
-//Generate Random Facts
+/* Remove insults
 	const url2 = 'https://insult.mattbas.org/api/en/insult.json';
     fetch(url2, {mode: 'cors'})
     .then(res => res.json()) // parse response as JSON
@@ -33,5 +33,6 @@ function excuse(){
     .catch(err => {
     	console.log(`error ${err}`);
     });
-    
+
+*/
 }
