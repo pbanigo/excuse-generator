@@ -1,4 +1,5 @@
 //const suggestion = document.querySelector('p');
+
 const synth = window.speechSynthesis; //Added Voice synthesis
 document.getElementById('generate').addEventListener('click', excuse);
 function excuse(){
@@ -22,7 +23,12 @@ function excuse(){
 
 //Generate Random Facts
 	const url2 = 'https://evilinsult.com/generate_insult.php?lang=en&type=json';
-    fetch(url2, {mode: 'cors'})
+    fetch(url2, {
+           method: 'POST',
+           mode: 'cors',
+           headers: {
+             'Content-Type': 'application/json'
+       }})
     .then(res => res.json()) // parse response as JSON
     .then(data => {
     	console.log(data);
