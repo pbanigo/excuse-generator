@@ -1,6 +1,5 @@
 :root{
-
-
+  border: 2px solid white;
 };
 
 
@@ -18,18 +17,28 @@ html{
 
 body {
     width: 50%;
-    height: 100%;
+    height: 100vh;
     text-align: center;
     margin: auto;
     font-size: 1.5rem;
-    /*background: linear-gradient(to left, white, green);*/
+    background: linear-gradient(to right, red, purple);
 }
 #app{
-	margin-top: 10%;
+  width: 60%;
+  margin: auto;
+  margin-top: 10%;
+  max-height: 100vh;
 }
 #random{
 	font-style: italic;
   padding-top: 5%;
+}
+@keyframes horizontal-shaking {
+ 0% { transform: translateX(0) }
+ 25% { transform: translateX(5px) }
+ 50% { transform: translateX(-5px) }
+ 75% { transform: translateX(5px) }
+ 100% { transform: translateX(0) }
 }
 #generate {
   display: flex;
@@ -40,12 +49,29 @@ body {
     margin: auto;
     align-items: center;
     color: white;
-    background-color: red;
+    background-color: green;
+    animation-name: horizontal-shaking; 
+    animation-duration:  0.35s;
+    animation-iteration-count: 10;
+
+}
+#generate:visited {
+    background: linear-gradient(to left, green, blue);
+
 }
 h2{
   padding: 10%;
   text-transform: capitalize;
   font-weight: 800;
+}
+h1{
+  color: white;
+}
+span, span a {
+  color: white;
+}
+span a {
+  text-decoration: underline;
 }
 @media only screen and (max-width: 700px){
 	body{
